@@ -1,0 +1,398 @@
+@charset "UTF-8";
+/* ==============================
+	header
+===============================*/
+.pc-none {
+  display: none;
+}
+
+.sp-br {
+  display: none;
+}
+
+.header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.header .bg-images {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.header .bg-images img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header .menu {
+  position: absolute;
+  z-index: 30;
+  width: 90%;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5%;
+  overflow: hidden;
+}
+.header .menu .logo {
+  width: 180px;
+  height: 130px;
+}
+.header .menu .logo img {
+  width: 100%;
+  height: 100%;
+}
+.header .menu .links ul {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  height: 100%;
+}
+.header .menu .links ul li {
+  list-style: none;
+  font-size: 20px;
+  cursor: pointer;
+  transform: translateY(0);
+}
+.header .menu .links ul li:hover {
+  color: gray;
+}
+.header .content {
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-family: "Arvo", serif;
+}
+.header .content h1 {
+  margin-top: 7rem;
+  font-size: 8vw;
+}
+.header .content h1 span {
+  color: transparent;
+  -webkit-text-stroke-width: 0.5vw;
+  -webkit-text-stroke-color: black;
+}
+.header .content p {
+  font-size: 3rem;
+}
+.message {
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  overflow: hidden;
+}
+.message p {
+  line-height: 30px;
+}
+
+.menu {
+  width: 100%;
+  overflow: hidden;
+}
+.menu h2 {
+  font-size: 4rem;
+  margin-bottom: 80px;
+  text-align: center;
+}
+.menu .cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 80%;
+}
+.menu .cards .card {
+  width: 48%;
+  box-shadow: 12px 12px 15px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+}
+.menu .cards .card h3 {
+  font-size: 24px;
+  margin: 10px 0 10px 10px;
+}
+.menu .cards .card img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.menu .cards .card p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.menu .cards .card span {
+  display: block;
+  margin-left: auto;
+  font-weight: bold;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.belt {
+  width: 100%;
+  height: 500px;
+  margin-top: 150px;
+  display: flex;
+  gap: 0;
+  overflow: hidden;
+}
+.belt div {
+  width: 100%;
+  height: 100%;
+}
+.belt div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center 58%;
+     object-position: center 58%;
+}
+
+.access {
+  margin-bottom: 100px;
+  overflow: hidden;
+}
+.access h2 {
+  margin: 120px 0 80px;
+  font-size: 4rem;
+  text-align: center;
+}
+.access .wrap {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 auto;
+}
+.access .wrap .address {
+  width: 30%;
+  font-size: 22px;
+}
+.access .wrap .address .content-wrapper {
+  display: flex;
+  margin-bottom: 30px;
+}
+.access .wrap .address .content-wrapper .cookie {
+  color: brown;
+  margin-right: 10px;
+  margin-top: 4px;
+  animation: icon-animation 2s infinite;
+}
+.access .wrap .address .content-wrapper .calendar {
+  color: blue;
+  margin-right: 10px;
+  margin-top: 4px;
+  animation: icon-animation 2s infinite;
+  animation-delay: 0.5s;
+}
+.access .wrap .address .content-wrapper .clock {
+  color: green;
+  margin-right: 10px;
+  margin-top: 4px;
+  animation: icon-animation 2s infinite;
+  animation-delay: 1s;
+}
+@keyframes icon-animation {
+  0% {
+    transform: none;
+  }
+  6% {
+    transform: translateY(-10px);
+  }
+  12% {
+    transform: none;
+  }
+  18% {
+    transform: translateY(-10px);
+  }
+  24% {
+    transform: none;
+  }
+}
+.access .wrap .address .content-wrapper div h3 {
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+.access .wrap .address .content-wrapper p {
+  font-size: 20px;
+  line-height: 30px;
+}
+.access .wrap .map {
+  width: 65%;
+  height: 500px;
+}
+.access .wrap .map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* ==============================
+	footer
+===============================*/
+.footer {
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.1) 0%, rgba(255, 192, 203, 0.9) 20%, rgb(255, 192, 203) 50%, rgb(255, 203, 212) 80%);
+}
+.footer .footer-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.footer .footer-container .footer-circle {
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  position: relative;
+  z-index: 5;
+}
+.footer .footer-container .footer-circle::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #ff1493;
+  border-top-color: #ee82ee;
+  border-radius: 50%;
+  filter: blur(1px);
+  animation: footer-circle-spin 3s ease-in-out infinite;
+}
+@keyframes footer-circle-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.footer .footer-container .footer-circle.delay::after {
+  animation-delay: 1s;
+}
+.footer .footer-container p {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0 15px;
+}
+.footer .footer-container span {
+  font-size: 16px;
+}
+.footer img {
+  width: 100px;
+  height: 100px;
+}
+
+/* ==============================
+	タブレット用
+===============================*/
+@media screen and (max-width: 768px) {
+  .pc-none {
+    display: block;
+  }
+  .tb-none {
+    display: none;
+  }
+  .header .content h1 {
+    font-size: 11vw;
+    text-align: center;
+    line-height: 100px;
+  }
+  .menu .cards {
+    width: 92%;
+  }
+  .belt {
+    height: 300px;
+  }
+  .access .wrap {
+    flex-direction: column;
+    width: 95%;
+  }
+  .access .wrap .address {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .access .wrap .address .content-wrapper {
+    margin-left: 40px;
+  }
+  .access .wrap .map {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+/* ==============================
+  SP用
+===============================*/
+@media screen and (max-width: 480px) {
+  .sp-br {
+    display: block;
+  }
+  .sp-none {
+    display: none;
+  }
+  .tb-none {
+    display: block;
+  }
+  .header .menu {
+    width: 96%;
+    height: 120px;
+    margin-left: 0;
+  }
+  .header .menu .logo {
+    width: 100px;
+    height: 70px;
+  }
+  .header .content h1 {
+    font-size: 20vw;
+  }
+  .menu h2 {
+    font-size: 3rem;
+  }
+  .menu .cards {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 90%;
+  }
+  .menu .cards .card {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .belt {
+    margin-top: 80px;
+  }
+  .belt div {
+    overflow: hidden;
+  }
+  .belt div img {
+    transform: scale(1.5);
+    -o-object-position: center 75%;
+       object-position: center 75%;
+  }
+  .access h2 {
+    font-size: 3rem;
+  }
+  .access .wrap .address {
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .access .wrap .address .content-wrapper {
+    margin-left: 0;
+  }
+  .access .wrap .map {
+    height: 300px;
+  }
+}/*# sourceMappingURL=style.css.map */
