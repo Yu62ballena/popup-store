@@ -56,7 +56,9 @@ gsap.from(chars, {
  *                    message 
  *
  \*============================================================================*/
-const messageAnimation = new SplitText(".message p", { type: "lines" });
+const messageAnimation = new SplitText(".message h2, .message p", {
+  type: "lines",
+});
 const messageLines = messageAnimation.lines;
 
 gsap.from(messageLines, {

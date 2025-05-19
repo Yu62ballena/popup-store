@@ -14,7 +14,6 @@
   position: relative;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
 }
 .header .bg-images {
   position: absolute;
@@ -33,15 +32,15 @@
   position: absolute;
   z-index: 30;
   width: 90%;
-  height: 150px;
+  height: 180px;
   display: flex;
   justify-content: space-between;
   margin-left: 5%;
-  overflow: hidden;
 }
 .header .menu .logo {
-  width: 180px;
-  height: 130px;
+  width: 130px;
+  height: 180px;
+  transform: rotate(-15deg);
 }
 .header .menu .logo img {
   width: 100%;
@@ -91,13 +90,25 @@
   margin-bottom: 100px;
   overflow: hidden;
 }
-.message p {
+.message div {
+  width: 80%;
+  margin: 0 auto;
+}
+.message div h2 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+.message div p {
   line-height: 30px;
+  font-size: 18px;
+  line-height: 27px;
+}
+.message .first {
+  margin-bottom: 100px;
 }
 
 .menu {
   width: 100%;
-  overflow: hidden;
 }
 .menu h2 {
   font-size: 4rem;
@@ -128,6 +139,7 @@
   font-size: 18px;
   margin-bottom: 10px;
   margin-left: 10px;
+  line-height: 27px;
 }
 .menu .cards .card span {
   display: block;
@@ -353,8 +365,9 @@
     margin-left: 0;
   }
   .header .menu .logo {
-    width: 100px;
-    height: 70px;
+    width: 120px;
+    height: 170px;
+    margin-left: 5px;
   }
   .header .content h1 {
     font-size: 20vw;
