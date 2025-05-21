@@ -78,12 +78,14 @@
     margin-left: 5%;
 
     .logo {
-      width: 130px;
-      height: 180px;
+      width: 8rem;
+      aspect-ratio: 2 / 3;
+      height: auto;
       // transform: rotate(-15deg);
       img {
         width: 100%;
         height: 100%;
+        object-fit: contain;
       }
     }
 
@@ -123,7 +125,7 @@
 
     div {
       h1 {
-        margin-top: 7rem;
+        margin-top: 10rem;
         line-height: 9rem;
         font-size: 8vw;
 
@@ -220,6 +222,7 @@
       font-size: 3rem;
     }
     .date {
+      font-family: "Alfa Slab One", serif;
     }
   }
 }
@@ -506,8 +509,6 @@
 
     .menu {
       .logo {
-        width: 100px;
-        height: 140px;
         img {
         }
       }
@@ -522,9 +523,10 @@
     .content {
       div {
         h1 {
-          font-size: 13vw;
+          font-size: 16vw;
           text-align: center;
-          line-height: 100px;
+          line-height: 140px;
+          margin-top: 12rem;
 
           span {
           }
@@ -670,14 +672,13 @@
       margin-left: 0;
 
       .logo {
-        width: 120px;
-        height: 170px;
         margin-left: 5px;
 
         img {
         }
       }
       .links {
+        // display: none;
         ul {
           li {
           }
@@ -686,11 +687,14 @@
     }
 
     .content {
+      width: 100%;
       div {
         h1 {
-          font-size: 14vw;
-          margin-top: 10rem;
-          span {
+          font-size: 20vw;
+          margin-top: 7rem;
+          line-height: 80px;
+          .sp-title {
+            font-size: 17vw;
           }
         }
       }
@@ -698,6 +702,8 @@
       p {
       }
       .date {
+        transform: translateY(-40px);
+        font-size: 1.8rem;
       }
     }
   }
