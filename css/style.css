@@ -21,12 +21,44 @@
   left: 0;
   height: 100%;
   width: 100%;
+  z-index: 20;
 }
-.header .bg-images img {
-  height: 100%;
+.header .bg-images .splide__pagination__page {
+  width: 16px; /* 幅を大きく */
+  height: 16px; /* 高さを大きく */
+  margin: 0 12px 20px; /* ドット間の余白も調整 */
+  border-radius: 50%; /* 完全な円形に保つ */
+  transition: all 0.3s ease; /* 変化を滑らかに */
+}
+.header .bg-images div {
   width: 100%;
+  height: 100%;
+}
+.header .bg-images div ul {
+  width: 100%;
+  height: 100%;
+}
+.header .bg-images div ul li {
+  width: 100%;
+  height: 100%;
+}
+.header .bg-images div ul li div {
+  width: 100%;
+  height: 100%;
+}
+.header .bg-images div ul li div img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.header .bg-images div ul li div .slide-image4 {
+  -o-object-position: center 30%;
+     object-position: center 30%;
+}
+.header .bg-images div ul li div .slide-image6 {
+  -o-object-position: center top;
+     object-position: center top;
 }
 .header .menu {
   position: absolute;
@@ -40,7 +72,6 @@
 .header .menu .logo {
   width: 130px;
   height: 180px;
-  transform: rotate(-15deg);
 }
 .header .menu .logo img {
   width: 100%;
@@ -57,6 +88,7 @@
   font-size: 20px;
   cursor: pointer;
   transform: translateY(0);
+  height: 30px;
 }
 .header .menu .links ul li:hover {
   color: gray;
@@ -69,17 +101,84 @@
   justify-content: space-around;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: 90%;
   font-family: "Arvo", serif;
 }
-.header .content h1 {
+.header .content div h1 {
   margin-top: 7rem;
+  line-height: 9rem;
   font-size: 8vw;
 }
-.header .content h1 span {
+.header .content div h1 div {
+  display: flex;
+  align-items: baseline;
+}
+.header .content div h1 div .by-heigei {
+  font-size: 2rem;
+  margin-left: 30px;
+}
+.header .content div h1 div .by-heigei .i-jump {
+  color: #ff1493;
+  animation: i-jump 3s infinite;
+}
+@keyframes i-jump {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-30px);
+  }
+  45% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  55% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.header .content div h1 .popup {
   color: transparent;
   -webkit-text-stroke-width: 0.5vw;
   -webkit-text-stroke-color: black;
+}
+.header .content div h1 .popup .u-anim {
+  animation: u-anim 3s infinite;
+}
+@keyframes u-anim {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  20% {
+    transform: rotate(360deg) translateY(0);
+  }
+  30% {
+    transform: rotate(360deg) translateY(-30px);
+  }
+  45% {
+    transform: rotate(360deg) translateY(0);
+  }
+  50% {
+    transform: rotate(360deg) translateY(-15px);
+  }
+  55% {
+    transform: rotate(360deg) translateY(0);
+  }
+  100% {
+    transform: rotate(360deg) translateY(0);
+  }
+}
+.header .content div .by-heigei {
+  right: 0;
+  bottom: 0;
+  font-size: 1.5rem;
 }
 .header .content p {
   font-size: 3rem;
@@ -269,19 +368,10 @@
   margin-bottom: 20px;
 }
 .footer .footer-container .footer-circle {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   background-color: transparent;
   position: relative;
-  z-index: 5;
-}
-.footer .footer-container .footer-circle::after {
-  content: "";
-  position: absolute;
-  top: -3px;
-  left: 0;
-  width: 100%;
-  height: 100%;
   border: 3px solid #ff1493;
   border-top-color: #ee82ee;
   border-radius: 50%;
@@ -293,20 +383,26 @@
     transform: rotate(360deg);
   }
 }
-.footer .footer-container .footer-circle.delay::after {
+.footer .footer-container .footer-circle.delay {
   animation-delay: 1s;
 }
-.footer .footer-container p {
+.footer .footer-container div {
+  height: 40px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.footer .footer-container div p {
+  font-size: 1.2rem;
   font-weight: bold;
-  font-size: 20px;
-  margin: 0 15px;
+  line-height: 1.8rem;
+  text-align: center;
 }
 .footer .footer-container span {
   font-size: 16px;
 }
 .footer img {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 }
 
 /* ==============================
@@ -319,10 +415,29 @@
   .tb-none {
     display: none;
   }
-  .header .content h1 {
-    font-size: 11vw;
+  .header .menu .logo {
+    width: 100px;
+    height: 140px;
+  }
+  .header .content div h1 {
+    font-size: 13vw;
     text-align: center;
     line-height: 100px;
+  }
+  .header .content div h1 div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header .content div h1 div .by-heigei {
+    font-size: 1.5rem;
+    align-self: flex-end;
+    margin-right: 4rem;
+  }
+  .message div {
+    width: 90%;
+  }
+  .message div h2 {
+    font-size: 1.3rem;
   }
   .menu .cards {
     width: 92%;
@@ -369,8 +484,15 @@
     height: 170px;
     margin-left: 5px;
   }
-  .header .content h1 {
-    font-size: 20vw;
+  .header .content div h1 {
+    font-size: 14vw;
+    margin-top: 10rem;
+  }
+  .message {
+    text-align: left;
+  }
+  .message h2 {
+    line-height: 2.2rem;
   }
   .menu h2 {
     font-size: 3rem;
@@ -407,5 +529,9 @@
   }
   .access .wrap .map {
     height: 300px;
+  }
+  .footer .footer-container {
+    transform: translateX(-10px);
+    margin-bottom: 40px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -14,6 +14,7 @@
   height: 100vh;
   width: 100%;
   // overflow: hidden;
+  // z-index: 20;
 
   .bg-images {
     position: absolute;
@@ -21,13 +22,51 @@
     left: 0;
     height: 100%;
     width: 100%;
+    z-index: 20;
 
-    img {
-      height: 100%;
+    .splide__pagination__page {
+      width: 16px; /* 幅を大きく */
+      height: 16px; /* 高さを大きく */
+      margin: 0 12px 20px; /* ドット間の余白も調整 */
+      border-radius: 50%; /* 完全な円形に保つ */
+      transition: all 0.3s ease; /* 変化を滑らかに */
+    }
+
+    div {
       width: 100%;
-      object-fit: cover;
+      height: 100%;
+
+      ul {
+        width: 100%;
+        height: 100%;
+
+        li {
+          width: 100%;
+          height: 100%;
+
+          div {
+            width: 100%;
+            height: 100%;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+            .slide-image4 {
+              object-position: center 30%;
+            }
+
+            .slide-image6 {
+              object-position: center top;
+            }
+          }
+        }
+      }
     }
   }
+
+  // splide
 
   .menu {
     position: absolute;
@@ -37,12 +76,11 @@
     display: flex;
     justify-content: space-between;
     margin-left: 5%;
-    // overflow: hidden;
 
     .logo {
       width: 130px;
       height: 180px;
-      transform: rotate(-15deg);
+      // transform: rotate(-15deg);
       img {
         width: 100%;
         height: 100%;
@@ -60,8 +98,8 @@
           list-style: none;
           font-size: 20px;
           cursor: pointer;
-          // transition: 0.2s;
           transform: translateY(0);
+          height: 30px;
 
           &:hover {
             color: gray;
@@ -79,19 +117,105 @@
     justify-content: space-around;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: 90%;
     font-family: "Arvo", serif;
+    // "Ancizar Serif",
 
-    h1 {
-      margin-top: 7rem;
-      font-size: 8vw;
+    div {
+      h1 {
+        margin-top: 7rem;
+        line-height: 9rem;
+        font-size: 8vw;
 
-      span {
-        color: transparent;
-        -webkit-text-stroke-width: 0.5vw;
-        -webkit-text-stroke-color: black;
+        div {
+          display: flex;
+          align-items: baseline;
+          .popup-store {
+          }
+          .by-heigei {
+            font-size: 2rem;
+            margin-left: 30px;
+
+            .i-jump {
+              color: #ff1493;
+              animation: i-jump 3s infinite;
+            }
+
+            @keyframes i-jump {
+              0% {
+                transform: translateY(0);
+              }
+
+              20% {
+                transform: translateY(0);
+              }
+
+              30% {
+                transform: translateY(-30px);
+              }
+              45% {
+                transform: translateY(0);
+              }
+
+              50% {
+                transform: translateY(-15px);
+              }
+              55% {
+                transform: translateY(0);
+              }
+
+              100% {
+                transform: translateY(0);
+              }
+            }
+          }
+        }
+
+        .popup {
+          color: transparent;
+          -webkit-text-stroke-width: 0.5vw;
+          -webkit-text-stroke-color: black;
+
+          .u-anim {
+            animation: u-anim 3s infinite;
+          }
+
+          @keyframes u-anim {
+            0% {
+              transform: rotate(0deg) translateY(0);
+            }
+
+            20% {
+              transform: rotate(360deg) translateY(0);
+            }
+
+            30% {
+              transform: rotate(360deg) translateY(-30px);
+            }
+            45% {
+              transform: rotate(360deg) translateY(0);
+            }
+
+            50% {
+              transform: rotate(360deg) translateY(-15px);
+            }
+            55% {
+              transform: rotate(360deg) translateY(0);
+            }
+
+            100% {
+              transform: rotate(360deg) translateY(0);
+            }
+          }
+        }
+      }
+      .by-heigei {
+        right: 0;
+        bottom: 0;
+        font-size: 1.5rem;
       }
     }
+
     p {
       font-size: 3rem;
     }
@@ -312,32 +436,16 @@
     align-items: center;
     margin-bottom: 20px;
 
-    // .circle {
-    //   color: #ff1493;
-    //   font-size: 30px;
-    // }
-
     .footer-circle {
-      width: 28px;
-      height: 28px;
+      width: 30px;
+      height: 30px;
       background-color: transparent;
       position: relative;
-      z-index: 5;
-
-      &::after {
-        content: "";
-        position: absolute;
-        top: -3px;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 3px solid #ff1493;
-        border-top-color: #ee82ee;
-        border-radius: 50%;
-        filter: blur(1px);
-
-        animation: footer-circle-spin 3s ease-in-out infinite;
-      }
+      border: 3px solid #ff1493;
+      border-top-color: #ee82ee;
+      border-radius: 50%;
+      filter: blur(1px);
+      animation: footer-circle-spin 3s ease-in-out infinite;
 
       @keyframes footer-circle-spin {
         to {
@@ -346,24 +454,35 @@
       }
 
       &.delay {
-        &::after {
-          animation-delay: 1s;
-        }
+        animation-delay: 1s;
       }
     }
 
-    p {
-      font-weight: bold;
-      font-size: 20px;
-      margin: 0 15px;
+    div {
+      height: 40px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+      // margin-right: 12px;
+      p {
+        font-size: 1.2rem;
+        font-weight: bold;
+        line-height: 1.8rem;
+        text-align: center;
+      }
     }
+
+    // p {
+    //   font-weight: bold;
+    //   font-size: 20px;
+    //   margin: 0 15px;
+    // }
     span {
       font-size: 16px;
     }
   }
   img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -387,6 +506,8 @@
 
     .menu {
       .logo {
+        width: 100px;
+        height: 140px;
         img {
         }
       }
@@ -399,14 +520,28 @@
     }
 
     .content {
-      h1 {
-        font-size: 11vw;
-        text-align: center;
-        line-height: 100px;
+      div {
+        h1 {
+          font-size: 13vw;
+          text-align: center;
+          line-height: 100px;
 
-        span {
+          span {
+          }
+
+          div {
+            flex-direction: column;
+            align-items: center;
+
+            .by-heigei {
+              font-size: 1.5rem;
+              align-self: flex-end;
+              margin-right: 4rem;
+            }
+          }
         }
       }
+
       p {
       }
       .date {
@@ -415,6 +550,13 @@
   }
 
   .message {
+    div {
+      width: 90%;
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
     p {
     }
   }
@@ -544,12 +686,15 @@
     }
 
     .content {
-      h1 {
-        font-size: 20vw;
-
-        span {
+      div {
+        h1 {
+          font-size: 14vw;
+          margin-top: 10rem;
+          span {
+          }
         }
       }
+
       p {
       }
       .date {
@@ -558,6 +703,11 @@
   }
 
   .message {
+    text-align: left;
+
+    h2 {
+      line-height: 2.2rem;
+    }
     p {
     }
   }
@@ -631,6 +781,9 @@
 
   .footer {
     .footer-container {
+      transform: translateX(-10px);
+      margin-bottom: 40px;
+
       .footer-circle {
         &::after {
         }

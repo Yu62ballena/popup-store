@@ -11,11 +11,16 @@
       property="og:description"
       content="銀座で期間限定の香港スイーツをお楽しみいただけます。"
     />
-    <!-- <meta property="og:image" content="https://yoursite.com/images/ogp.jpg"> -->
+    <meta property="og:image" content="images/og-image.jpg" />
 
     <!-- CSSリンク -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- splide -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
 
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,6 +37,10 @@
       href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+DK+Loopet:wght@100..400&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- gsap -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
@@ -46,13 +55,62 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
 
+    <!-- favicon -->
+    <link rel="icon" href="favicon/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32×32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16×16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+
     <title>HongKong Sweets</title>
   </head>
   <body>
     <header class="header">
-      <div class="bg-images">
+      <!-- <div class="bg-images">
         <img src="images/0425_012.jpg" alt="" />
+      </div> -->
+
+      <!-- splide -->
+      <div class="splide bg-images" aria-label="main-bg-slide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <div><img src="images/0425_012.jpg" alt="ホーローバン" /></div>
+            </li>
+            <li class="splide__slide">
+              <div><img src="images/0425_009.jpg" alt="エッグタルト" /></div>
+            </li>
+            <li class="splide__slide">
+              <div><img src="images/0425_011.jpg" alt="マーラーガオ" /></div>
+            </li>
+            <!-- <li class="splide__slide">
+              <div><img class="slide-image4" src="images/flyer.jpg" alt="喜記割引" /></div>
+            </li>
+            <li class="splide__slide">
+              <div><img src="images/stamp.jpg" alt="切手" /></div>
+            </li>
+            <li class="splide__slide">
+              <div><img class="slide-image6" src="images/popup-flyer.jpg" alt="ポップアップ" /></div>
+            </li> -->
+          </ul>
+        </div>
       </div>
+
+      <!-- splideここまで -->
+
       <div class="menu">
         <div class="logo">
           <img src="images/logo.png" alt="" />
@@ -66,10 +124,23 @@
         </div>
       </div>
       <div class="content">
-        <h1>
-          Heigei <br class="sp-br" /><span>Pop-up</span>
-          <br class="pc-none" />Store
-        </h1>
+        <div>
+          <h1>
+            HongKong<br class="sp-br" />
+            <span class="popup"> Swe<span class="u-anim">e</span>ts</span
+            ><br class="sp-br" />
+            <div>
+              <span class="popup-store">Pop-up Store</span>
+              <span class="by-heigei"
+                >produced by He<span class="i-jump">i</span>ge<span
+                  class="i-jump"
+                  >i</span
+                ></span
+              >
+            </div>
+            <br />
+          </h1>
+        </div>
         <p></p>
         <p class="date">5/20 ~ 5/31</p>
       </div>
@@ -111,7 +182,7 @@
             <img src="images/bolobun-butter.jpg" alt="ボーローバン" />
             <p>
               黄金色のサクサククッキー生地とふわふわのパン。<br />
-              記事が織りなす二重奏に贅沢にバターをサンド。
+              生地が織りなす二重奏に贅沢にバターをサンド。
             </p>
             <span>630円(税込)</span>
           </div>
@@ -202,15 +273,16 @@
 
     <footer class="footer">
       <div class="footer-container">
-        <!-- <i class="fa-regular fa-circle circle"></i> -->
         <div class="footer-circle"></div>
-        <p>Heigei Pop-up Store</p>
-        <!-- <i class="fa-regular fa-circle circle"></i> -->
+        <div>
+          <p>HongKong Sweets <br class="pc-none sp-br">Pop-up Store</p>
+          <p>produced by Heigei</p>
+        </div>
         <div class="footer-circle delay"></div>
       </div>
       <img src="images/heigei-logo.png" alt="" />
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

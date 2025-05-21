@@ -245,3 +245,21 @@ footerTextAnimation
     { autoAlpha: 0, scale: 3, duration: 0.8, filter: "blur(20px)" },
     "-=0.4"
   );
+
+/*============================================================================*\
+ *
+ *                 splide 
+ *
+ \*============================================================================*/
+const splide = new Splide(".splide", {
+  type: "fade", // フェードエフェクト
+  rewind: true, // 最後のスライドから最初に戻る
+  autoplay: true, // 自動再生
+  interval: 5000, // 6秒ごとに切り替え
+  arrows: false, // 矢印を非表示
+  pagination: true, // ページネーション（ドット）も非表示
+  speed: 4000, // トランジション速度（5秒）
+  pauseOnHover: false, // ホバー時に一時停止しない
+});
+
+splide.mount();
