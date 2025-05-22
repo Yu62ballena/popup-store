@@ -13,8 +13,6 @@
   position: relative;
   height: 100vh;
   width: 100%;
-  // overflow: hidden;
-  // z-index: 20;
 
   .bg-images {
     position: absolute;
@@ -81,7 +79,6 @@
       width: 8rem;
       aspect-ratio: 2 / 3;
       height: auto;
-      // transform: rotate(-15deg);
       img {
         width: 100%;
         height: 100%;
@@ -113,7 +110,7 @@
 
   .content {
     position: absolute;
-    z-index: 20;
+    z-index: 40;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -255,7 +252,6 @@
 
 .menu {
   width: 100%;
-  // overflow: hidden;
 
   h2 {
     font-size: 4rem;
@@ -415,6 +411,37 @@
   }
 }
 
+.sns {
+  text-align: center;
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  a {
+    text-decoration: none;
+    margin-bottom: 50px;
+    div {
+      margin: 0 auto;
+      padding: 5px 10px;
+      width: fit-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid #ff1493;
+      color: #ff1493;
+      margin-bottom: 80px;
+
+      .insta-logo {
+        font-size: 2.5rem;
+        margin-right: 10px;
+      }
+      p {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
 /* ==============================
 	footer
 ===============================*/
@@ -465,7 +492,6 @@
       height: 40px;
       margin-left: 20px;
       margin-bottom: 20px;
-      // margin-right: 12px;
       p {
         font-size: 1.2rem;
         font-weight: bold;
@@ -474,11 +500,6 @@
       }
     }
 
-    // p {
-    //   font-weight: bold;
-    //   font-size: 20px;
-    //   margin: 0 15px;
-    // }
     span {
       font-size: 16px;
     }

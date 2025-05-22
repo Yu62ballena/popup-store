@@ -263,3 +263,17 @@ const splide = new Splide(".splide", {
 });
 
 splide.mount();
+
+/*============================================================================*\
+ *
+ *               sns 
+ *
+ \*============================================================================*/
+const snsAnimation = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".sns",
+    start: "top 80%",
+  },
+});
+
+snsAnimation.from(".sns", { autoAlpha: 0, y: 50 });

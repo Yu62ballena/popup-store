@@ -3,15 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-1DC6GRXV9H"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-1DC6GRXV9H");
+    </script>
+
+    <!-- 重要リソースのプリロード -->
+    <!-- メインのCSS（最優先） -->
+    <link rel="preload" href="css/style.css" as="style" />
+
+    <!-- 重要な画像 -->
+    <link rel="preload" href="images/0425_012.jpg" as="image" />
+
+    <!-- ファーストビューで使用する重要なフォント -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      as="style"
+    />
+
+    <!-- ファーストビューで使用するスライダーのCSS（訪問者が最初に見るエリアにスライダーがある場合） -->
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      as="style"
+    />
+
+    <!-- メインのアニメーションライブラリ（ファーストビューでGSAPアニメーションを使用している場合） -->
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"
+      as="script"
+    />
+
+    <!-- meta -->
+    <meta
+      name="description"
+      content="銀座で期間限定の香港スイーツをお楽しみいただけます。HongKong Sweets Pop-up Store | 香港スイーツ 5/20～5/31 5/20～5/31開催。"
+    />
     <meta
       property="og:title"
-      content="Heigei Pop-up Store | 香港スイーツ 5/20～5/31"
+      content="HongKong Sweets Pop-up Store | 香港スイーツ 5/20～5/31"
     />
     <meta
       property="og:description"
       content="銀座で期間限定の香港スイーツをお楽しみいただけます。"
     />
-    <meta property="og:image" content="images/og-image.jpg" />
+    <meta
+      property="og:image"
+      content="https://heigei.jp/sweets/images/og-image.jpg"
+    />
+    <meta property="og:url" content="https://heigei.jp/sweets/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Heigei Pop-up Store" />
+
+    <link rel="canonical" href="https://heigei.jp/sweets/" />
+
+    <!-- X用 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="HongKong Sweets Pop-up Store | 香港スイーツ 5/20～5/31 | 香港スイーツ 5/20～5/31"
+    />
+    <meta
+      name="twitter:description"
+      content="銀座で期間限定の香港スイーツをお楽しみいただけます。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://heigei.jp/sweets/images/og-image.jpg"
+    />
 
     <!-- CSSリンク -->
     <link rel="stylesheet" href="css/reset.css" />
@@ -41,7 +112,10 @@
       href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Lexend:wght@100..900&family=Playwrite+DK+Loopet:wght@100..400&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Lexend:wght@100..900&family=Playwrite+DK+Loopet:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- gsap -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
@@ -57,30 +131,33 @@
     />
 
     <!-- favicon -->
-    <link rel="icon" href="favicon/favicon.ico" sizes="any" />
+    <link
+      rel="icon"
+      href="https://heigei.jp/sweets/favicon/favicon.ico"
+      sizes="any"
+    />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="favicon/favicon-32×32.png"
+      href="https://heigei.jp/sweets/favicon/favicon-32×32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="favicon/favicon-16×16.png"
+      href="https://heigei.jp/sweets/favicon/favicon-16×16.png"
     />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="favicon/apple-touch-icon.png"
+      href="https://heigei.jp/sweets/favicon/apple-touch-icon.png"
     />
 
-    <title>HongKong Sweets</title>
+    <title>HongKong Sweets Pop-up Store | 香港スイーツ 5/20～5/31</title>
   </head>
   <body>
     <header class="header">
-
       <!-- splide -->
       <div class="splide bg-images" aria-label="main-bg-slide">
         <div class="splide__track">
@@ -94,15 +171,6 @@
             <li class="splide__slide">
               <div><img src="images/0425_011.jpg" alt="マーラーガオ" /></div>
             </li>
-            <!-- <li class="splide__slide">
-              <div><img class="slide-image4" src="images/flyer.jpg" alt="喜記割引" /></div>
-            </li>
-            <li class="splide__slide">
-              <div><img src="images/stamp.jpg" alt="切手" /></div>
-            </li>
-            <li class="splide__slide">
-              <div><img class="slide-image6" src="images/popup-flyer.jpg" alt="ポップアップ" /></div>
-            </li> -->
           </ul>
         </div>
       </div>
@@ -128,7 +196,9 @@
             <span class="popup"> Swe<span class="u-anim">e</span>ts</span
             ><br class="sp-br" />
             <div>
-              <span class="popup-store">Pop-up <br class="pc-none sp-br">Store</span>
+              <span class="popup-store"
+                >Pop-up <br class="pc-none sp-br" />Store</span
+              >
               <span class="by-heigei"
                 >produced by He<span class="i-jump">i</span>ge<span
                   class="i-jump"
@@ -251,7 +321,7 @@
 
             <div class="content-wrapper">
               <i class="fa-solid fa-clock clock"></i>
-              <p>11:00〜18:00<br />(最終日17:00まで)</p>
+              <p>11:00〜なくなり次第終了<br />(最終日17:00まで)</p>
             </div>
           </div>
           <div class="map">
@@ -267,13 +337,23 @@
           </div>
         </div>
       </div>
+
+      <div class="sns">
+        <h3>- Follow Us -</h3>
+        <a href="https://www.instagram.com/heigei_ginza/">
+          <div>
+            <i class="fa-brands fa-instagram insta-logo"></i>
+            <p>喜記 銀座店</p>
+          </div>
+        </a>
+      </div>
     </main>
 
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-circle"></div>
         <div>
-          <p>HongKong Sweets <br class="pc-none sp-br">Pop-up Store</p>
+          <p>HongKong Sweets <br class="pc-none sp-br" />Pop-up Store</p>
           <p>produced by Heigei</p>
         </div>
         <div class="footer-circle delay"></div>
